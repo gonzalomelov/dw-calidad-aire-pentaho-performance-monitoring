@@ -598,7 +598,7 @@
            </partitioning>
     <connection>Hibernate</connection>
     <schema/>
-    <table>performance_monitoring_mdx</table>
+    <table>PERFORMANCE_MONITORING_MDX</table>
     <commit>1000</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>

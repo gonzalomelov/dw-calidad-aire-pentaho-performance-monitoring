@@ -7471,7 +7471,7 @@
      },
      {
       "name": "query",
-      "value": "SELECT QUERY as \"Queries\", COUNT(QUERY) as \"Quantity Executions\", AVG(QUERY_EXEC_TIME) AS \"Time execution in ms (Average)\"\nFROM performance_monitoring_mdx\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY COUNT(QUERY) DESC",
+      "value": "SELECT QUERY as \"Queries\", COUNT(QUERY) as \"Quantity Executions\", AVG(QUERY_EXEC_TIME) AS \"Time execution in ms (Average)\"\nFROM PERFORMANCE_MONITORING_MDX\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY COUNT(QUERY) DESC",
       "type": "SqlQuery"
      },
      {
@@ -7603,7 +7603,7 @@
      },
      {
       "name": "query",
-      "value": "SELECT QUERY, AVG(QUERY_EXEC_TIME)\nFROM performance_monitoring_mdx\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY AVG(QUERY_EXEC_TIME) DESC\nLIMIT 10",
+      "value": "SELECT QUERY, AVG(QUERY_EXEC_TIME)\nFROM PERFORMANCE_MONITORING_MDX\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY AVG(QUERY_EXEC_TIME) DESC\nLIMIT 10",
       "type": "SqlQuery"
      },
      {
@@ -7669,7 +7669,7 @@
      },
      {
       "name": "query",
-      "value": "SELECT QUERY, AVG(QUERY_EXEC_TIME)\nFROM performance_monitoring_mdx\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY AVG(QUERY_EXEC_TIME) ASC\nLIMIT 10",
+      "value": "SELECT QUERY, AVG(QUERY_EXEC_TIME)\nFROM PERFORMANCE_MONITORING_MDX\nWHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME>0\nGROUP BY QUERY\nORDER BY AVG(QUERY_EXEC_TIME) ASC\nLIMIT 10",
       "type": "SqlQuery"
      },
      {
@@ -7867,7 +7867,7 @@
      },
      {
       "name": "query",
-      "value": "SELECT query\nFROM performance_monitoring_mdx\nWHERE CAST(TIME AS DATE) = ${lastQueriesDate}\nORDER BY TIME DESC",
+      "value": "SELECT query\nFROM PERFORMANCE_MONITORING_MDX\nWHERE CAST(TIME AS DATE) = ${lastQueriesDate}\nORDER BY TIME DESC",
       "type": "SqlQuery"
      },
      {

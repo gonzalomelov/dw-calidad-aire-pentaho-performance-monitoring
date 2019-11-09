@@ -35,7 +35,7 @@
          <Parameter default="" name="endOverview" type="String"/>
       </Parameters>
       <Query>SELECT QUERY as "Queries", COUNT(QUERY) as "Quantity Executions", AVG(QUERY_EXEC_TIME) AS "Time execution in ms (Average)"
-FROM performance_monitoring_mdx
+FROM PERFORMANCE_MONITORING_MDX
 WHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME&gt;0
 GROUP BY QUERY
 ORDER BY COUNT(QUERY) DESC</Query>
@@ -64,7 +64,7 @@ ORDER BY COUNT(QUERY) DESC</Query>
          <Parameter default="" name="endOverview" type="String"/>
       </Parameters>
       <Query>SELECT QUERY, AVG(QUERY_EXEC_TIME)
-FROM performance_monitoring_mdx
+FROM PERFORMANCE_MONITORING_MDX
 WHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME&gt;0
 GROUP BY QUERY
 ORDER BY AVG(QUERY_EXEC_TIME) DESC
@@ -80,7 +80,7 @@ LIMIT 10</Query>
          <Parameter default="" name="endOverview" type="String"/>
       </Parameters>
       <Query>SELECT QUERY, AVG(QUERY_EXEC_TIME)
-FROM performance_monitoring_mdx
+FROM PERFORMANCE_MONITORING_MDX
 WHERE CAST(TIME AS DATE) between ${startOverview} AND ${endOverview} AND QUERY_EXEC_TIME&gt;0
 GROUP BY QUERY
 ORDER BY AVG(QUERY_EXEC_TIME) ASC
@@ -127,7 +127,7 @@ LIMIT 10</Query>
          <Parameter default="" name="lastQueriesDate" type="String"/>
       </Parameters>
       <Query>SELECT query
-FROM performance_monitoring_mdx
+FROM PERFORMANCE_MONITORING_MDX
 WHERE CAST(TIME AS DATE) = ${lastQueriesDate}
 ORDER BY TIME DESC</Query>
    </DataAccess>
